@@ -78,7 +78,7 @@ let tlStory1 = gsap.timeline();
 tlStory1.from("#story1", { yPercent: 100, opacity: 0 })
         .from("#story2", { yPercent: 100, opacity: 0 })
         .from("#story3", { yPercent: 100, opacity: 0 })
-        .fromTo("#story4", { opacity: 0 }, { yPercent: -25, opacity: 1 }, "<")
+        .fromTo("#story4", { opacity: 0 }, { yPercent: -5, opacity: 0.7 }, "<")
 	.to("#storyBlock1", { yPercent: 100 };
 
 ScrollTrigger.create({
