@@ -79,7 +79,7 @@ tlStory1.from("#story1", { yPercent: 100, opacity: 0 })
         .from("#story2", { yPercent: 100, opacity: 0 })
         .from("#story3", { yPercent: 100, opacity: 0 })
         .fromTo("#story4", { opacity: 0 }, { yPercent: -15, opacity: 0.7 })
-	.to("#storyBlock1", { yPercent: 10 });
+	.to("#storyBlock1", { yPercent: 5 });
 
 ScrollTrigger.create({
   animation: tlStory1,
@@ -87,7 +87,7 @@ ScrollTrigger.create({
   scrub: true,
   toggleActions: "play none none none",
   id: 'storyBlock1',
-  markers: false,
+  markers: true,
   //pin: '#storyBlock1',
   start: "top center",
   end: "center center"
@@ -99,7 +99,7 @@ tlStory2.from('#story5', { yPercent: 100, opacity: 0 })
 	.from('#story6', { yPercent: 100, opacity: 0 })
 	.from('#story7', { yPercent: 100, opacity: 0 })
 	.fromTo("#story8", { opacity: 0 }, { yPercent: -15, opacity: 0.7 })
-	.to("#storyBlock2", { yPercent: 10 });
+	.to("#storyBlock2", { yPercent: 5 });
 
 ScrollTrigger.create({
   animation: tlStory2,
@@ -107,7 +107,7 @@ ScrollTrigger.create({
   scrub: true,
   toggleActions: "play none none none",
   id: 'storyBlock2',
-  markers: false,
+  markers: true,
   //pin: '#storyBlock1',
   start: "top center",
   end: "center center"
@@ -118,8 +118,8 @@ let tlStory3 = gsap.timeline();
 tlStory3.from('#story9', { yPercent: 100, opacity: 0 })
 	.from('#story10', { yPercent: 100, opacity: 0 })
 	.from('#story11', { yPercent: 100, opacity: 0 })
-	.from('#story12', { yPercent: 100, opacity: 0 })
-	.to("#storyBlock3", { yPercent: 10 });
+	.from('#story12', { yPercent: 100, opacity: 0 });
+	//.to("#storyBlock3", { yPercent: 10 });
 
 ScrollTrigger.create({
   animation: tlStory3,
@@ -132,3 +132,23 @@ ScrollTrigger.create({
   start: "top center",
   end: "center center"
 });
+
+let tlStory4 = gsap.timeline();
+
+tlStory4.from('#story13', { yPercent: 100, opacity: 0 })
+	.from('#story14', { yPercent: 100, opacity: 0 });
+	//.to("#storyBlock3", { yPercent: 10 });
+
+ScrollTrigger.create({
+  animation: tlStory4,
+  trigger: '#storyBlock4',
+  scrub: true,
+  toggleActions: "play none none none",
+  id: 'storyBlock4',
+  markers: true,
+  //pin: '#storyBlock1',
+  start: "top center",
+  end: "center bottom"
+});
+
+
