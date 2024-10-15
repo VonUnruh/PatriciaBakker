@@ -130,5 +130,5 @@ ScrollTrigger.create({
   markers: true,
   //pin: '#storyBlock1',
   start: "top center",
-  end: "center 75%"
+  end: "center center"
 });
