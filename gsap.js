@@ -107,8 +107,28 @@ ScrollTrigger.create({
   scrub: true,
   toggleActions: "play none none none",
   id: 'storyBlock2',
-  markers: true,
+  markers: false,
   //pin: '#storyBlock1',
   start: "top center",
   end: "center center"
+});
+
+let tlStory3 = gsap.timeline();
+
+tlStory3.from('#story9', { yPercent: 100, opacity: 0 })
+	.from('#story10', { yPercent: 100, opacity: 0 })
+	.from('#story11', { yPercent: 100, opacity: 0 })
+	.from('#story12', { yPercent: 100, opacity: 0 })
+	.to("#storyBlock3", { yPercent: 10 });
+
+ScrollTrigger.create({
+  animation: tlStory3,
+  trigger: '#storyBlock3',
+  scrub: true,
+  toggleActions: "play none none none",
+  id: 'storyBlock3',
+  markers: true,
+  //pin: '#storyBlock1',
+  start: "top center",
+  end: "center 75%"
 });
