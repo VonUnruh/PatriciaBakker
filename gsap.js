@@ -92,3 +92,11 @@ ScrollTrigger.create({
   start: "top center",
   end: "center center"
 });
+
+let tlStory2 = gsap.timeline();
+
+tlStory2.from('#story5', { yPercent: 100, opacity: 0 })
+	.from('#story6', { yPercent: 100, opacity: 0 })
+	.from('#story7', { yPercent: 100, opacity: 0 })
+	.fromTo("#story8", { opacity: 0 }, { yPercent: -15, opacity: 0.7 })
+	.to("#storyBlock2", { yPercent: 10 });
