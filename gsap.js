@@ -87,7 +87,7 @@ ScrollTrigger.create({
   scrub: true,
   toggleActions: "play none none none",
   id: 'storyBlock1',
-  markers: true,
+  markers: false,
   //pin: '#storyBlock1',
   start: "top center",
   end: "center center"
@@ -100,3 +100,15 @@ tlStory2.from('#story5', { yPercent: 100, opacity: 0 })
 	.from('#story7', { yPercent: 100, opacity: 0 })
 	.fromTo("#story8", { opacity: 0 }, { yPercent: -15, opacity: 0.7 })
 	.to("#storyBlock2", { yPercent: 10 });
+
+ScrollTrigger.create({
+  animation: tlStory2,
+  trigger: '#storyBlock2',
+  scrub: true,
+  toggleActions: "play none none none",
+  id: 'storyBlock2',
+  markers: true,
+  //pin: '#storyBlock1',
+  start: "top center",
+  end: "center center"
+});
